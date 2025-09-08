@@ -42,7 +42,7 @@ router.get(
     res.cookie("authToken", token, {
       httpOnly: true, // Crucial for security
       secure: process.env.NODE_ENV === "production", // Send only over HTTPS in production
-      sameSite: "Lax", // Or "Strict" depending on your needs. "Lax" is a good default.
+      sameSite: "None", // Or "Strict" depending on your needs. "Lax" is a good default.
       maxAge: 24 * 60 * 60 * 1000, // 1 day, should match JWT expiry
       path: "/", // Cookie accessible for all paths
     });

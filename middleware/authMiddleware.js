@@ -21,7 +21,7 @@ export const authenticateJWT = (req, res, next) => {
     res.cookie("authToken", "", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
+      sameSite: "None",
       expires: new Date(0),
       path: "/",
     });

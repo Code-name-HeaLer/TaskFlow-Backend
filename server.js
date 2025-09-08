@@ -26,6 +26,8 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet()); // Set security headers
 app.use(xss()); // Prevent XSS attacks
 
+app.set("trust proxy", 1);
+
 // ------------------
 // Middleware
 // ------------------
