@@ -69,7 +69,7 @@ router.post("/logout", (req, res) => {
     // Clear the cookie
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "Lax",
+    sameSite: "None",
     expires: new Date(0), // Set expiry to a past date
     path: "/",
   });
